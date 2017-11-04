@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" >
+
+        <ImageView
+            android:id="@+id/Anh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/muco" />
+
+        <TextView
+            android:id="@+id/TenMonAn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left|center_vertical"
+            android:layout_marginTop="100dp"
+            android:hint="Tên Món Ăn"
+            android:paddingLeft="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TabHost
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tab">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="58dp" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/Tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="60px">
+
+                    <TextView
+                        android:id="@+id/TomTat"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp"
+                        android:hint="Tóm Tắt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="60px">
+                    <TextView
+                        android:id="@+id/NguyenLieu"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp"
+                        android:hint="Nguyên Liệu" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="60px">
+                    <TextView
+                        android:id="@+id/CachLam"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="14sp"
+                        android:hint=" Cách Làm" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+</LinearLayout>
